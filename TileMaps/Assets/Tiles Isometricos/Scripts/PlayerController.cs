@@ -11,13 +11,13 @@ public class PlayerController : MonoBehaviour
 
     // Inventario do Jogador
     public InventoryObject inventory;
+    public ShopObject shop;
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
         myRigidbody = GetComponent<Rigidbody2D>();
-
     }
 
     // Update is called once per frame
@@ -65,6 +65,7 @@ public class PlayerController : MonoBehaviour
             Destroy(collision.gameObject);
         }
     }
+    
     private void OnApplicationQuit()
     {
         inventory.Container.Clear(); 

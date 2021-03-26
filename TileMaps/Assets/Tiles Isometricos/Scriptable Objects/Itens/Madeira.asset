@@ -15,3 +15,5 @@ MonoBehaviour:
   prefab: {fileID: 8537302497782884437, guid: 653c0bd06644c9e49b08d53297f9d7f9, type: 3}
   type: 2
   descricao: "peda\xE7o de madeira!"
+  sellPrice: 1
+  buyPrice: 2
