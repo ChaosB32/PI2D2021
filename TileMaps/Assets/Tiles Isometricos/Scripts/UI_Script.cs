@@ -1,18 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class UI_Script : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public int coins = 1;
+    public TMP_Text coinUI;
+
     void Start()
     {
-        
+        coinUI.text = coins.ToString();
+        this.coinUI = GameObject.FindObjectOfType<TextMeshProUGUI>();
     }
-
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+
+    }
+    public void AddCoins()
+    {
+        coins++;
+        coinUI.text = coins.ToString();
     }
 }

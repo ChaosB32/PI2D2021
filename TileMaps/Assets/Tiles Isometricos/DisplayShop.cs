@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.EventSystems;
+using UnityEngine.Events;
 
 public class DisplayShop : MonoBehaviour
 {
@@ -53,9 +55,20 @@ public class DisplayShop : MonoBehaviour
             var obj = Instantiate(shop.Container[i].item.prefab, Vector3.zero, Quaternion.identity, transform);
             obj.GetComponent<RectTransform>().localPosition = GetPosition(i);
             obj.GetComponentInChildren<TextMeshProUGUI>().text = shop.Container[i].amount.ToString("n0");
+
             itensDisplayed.Add(shop.Container[i], obj);
         }
     }
+
+    private void AddEvent(GameObject obj, EventTriggerType type, UnityAction<BaseEventData> action)
+    {
+        EventTrigger trigger = obj.GetComponent<EventTrigger>();
+        var eventTrigger = new EventTrigger.Entry();
+        eventTrigger.eventID = type;
+        eventTrigger.callback.AddListener(action);
+        trigger.triggers.Add(eventTrigger);
+    }
+
     public Vector3 GetPosition(int i)
     {
         return new Vector3(X_START + (X_ESPACO_ENTRE_ITENS * (i % NUMERO_DE_COLUNAS)), Y_START + (-Y_ESPACO_ENTRE_ITENS * (i / NUMERO_DE_COLUNAS)), 0f);

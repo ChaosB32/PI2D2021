@@ -36,7 +36,6 @@ public class ShopObject : ScriptableObject, ISerializationCallbackReceiver
 
     }
 
-
     public void Save()
     {
         string saveData = JsonUtility.ToJson(this, true);

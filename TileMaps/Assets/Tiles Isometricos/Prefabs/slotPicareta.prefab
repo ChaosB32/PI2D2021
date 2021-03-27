@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1568347509945358328, guid: 094f075e8988ad14b8595e8a68ef0750, type: 3}
       propertyPath: m_Name
-      value: slot Variant 1
+      value: slotPicareta
       objectReference: {fileID: 0}
     - target: {fileID: 5874531745188348859, guid: 094f075e8988ad14b8595e8a68ef0750, type: 3}
       propertyPath: m_Pivot.x

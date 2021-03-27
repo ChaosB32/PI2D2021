@@ -1,8 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class CoinObject : MonoBehaviour
+public class ButtonPrefab : UI_Script
 {
-
 }
