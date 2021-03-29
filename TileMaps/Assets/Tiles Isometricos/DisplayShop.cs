@@ -15,6 +15,8 @@ public class DisplayShop : MonoBehaviour
     public int NUMERO_DE_COLUNAS;
     public int Y_ESPACO_ENTRE_ITENS;
 
+    public TMP_Text textoPrabotar;
+
     Dictionary<InventorySlot, GameObject> itensDisplayed = new Dictionary<InventorySlot, GameObject>();
 
 
@@ -44,6 +46,7 @@ public class DisplayShop : MonoBehaviour
                 var obj = Instantiate(shop.Container[i].item.prefab, Vector3.zero, Quaternion.identity, transform);
                 obj.GetComponent<RectTransform>().localPosition = GetPosition(i);
                 obj.GetComponentInChildren<TextMeshProUGUI>().text = shop.Container[i].amount.ToString("n0");
+                obj.GetComponent<UI_Script>().coinUI = textoPrabotar;
                 itensDisplayed.Add(shop.Container[i], obj);
             }
         }
@@ -55,7 +58,7 @@ public class DisplayShop : MonoBehaviour
             var obj = Instantiate(shop.Container[i].item.prefab, Vector3.zero, Quaternion.identity, transform);
             obj.GetComponent<RectTransform>().localPosition = GetPosition(i);
             obj.GetComponentInChildren<TextMeshProUGUI>().text = shop.Container[i].amount.ToString("n0");
-
+            obj.GetComponent<UI_Script>().coinUI = textoPrabotar;
             itensDisplayed.Add(shop.Container[i], obj);
         }
     }

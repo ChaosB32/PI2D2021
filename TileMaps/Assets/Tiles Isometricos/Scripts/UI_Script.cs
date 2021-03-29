@@ -8,6 +8,8 @@ public class UI_Script : MonoBehaviour
 {
     public int coins = 1;
     public TMP_Text coinUI;
+    public ShopObject shop;
+    public InventoryObject inventory;
 
     void Start()
     {
@@ -21,6 +23,12 @@ public class UI_Script : MonoBehaviour
     public void AddCoins()
     {
         coins++;
+        coinUI.text = coins.ToString();
+    }
+    public void RemoveCoins()
+    {
+        
+        coins--;
         coinUI.text = coins.ToString();
     }
 }

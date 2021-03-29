@@ -146,6 +146,7 @@ GameObject:
   - component: {fileID: 5879568701982151475}
   - component: {fileID: 525277080200097739}
   - component: {fileID: 8932458117842377057}
+  - component: {fileID: 2584385004317625810}
   m_Layer: 5
   m_Name: slot
   m_TagString: Untagged
@@ -254,4 +255,30 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 525277080200097739}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2584385004317625810}
+        m_TargetAssemblyTypeName: UI_Script, Assembly-CSharp
+        m_MethodName: RemoveCoins
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2584385004317625810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8537302497782884437}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 808a0ec4412e39b45b561436ac07a3d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coins: 1
+  coinUI: {fileID: 0}

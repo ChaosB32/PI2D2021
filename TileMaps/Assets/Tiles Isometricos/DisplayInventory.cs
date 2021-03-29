@@ -13,6 +13,8 @@ public class DisplayInventory : MonoBehaviour
     public int NUMERO_DE_COLUNAS;
     public int Y_ESPACO_ENTRE_ITENS;
 
+    public TMP_Text textoPrabotar;
+
     Dictionary<InventorySlot, GameObject> itensDisplayed = new Dictionary<InventorySlot, GameObject>();
     
 
@@ -42,8 +44,10 @@ public class DisplayInventory : MonoBehaviour
                 var obj = Instantiate(inventory.Container[i].item.prefab, Vector3.zero, Quaternion.identity, transform);
                 obj.GetComponent<RectTransform>().localPosition = GetPosition(i);
                 obj.GetComponentInChildren<TextMeshProUGUI>().text = inventory.Container[i].amount.ToString("n0");
+                obj.GetComponent<UI_Script>().coinUI = textoPrabotar;
                 itensDisplayed.Add(inventory.Container[i], obj);
             }
+            
         }
     }
     public void CreateDisplay()
@@ -53,6 +57,7 @@ public class DisplayInventory : MonoBehaviour
             var obj = Instantiate(inventory.Container[i].item.prefab, Vector3.zero, Quaternion.identity, transform);
             obj.GetComponent<RectTransform>().localPosition = GetPosition(i);
             obj.GetComponentInChildren<TextMeshProUGUI>().text = inventory.Container[i].amount.ToString("n0");
+            obj.GetComponent<UI_Script>().coinUI = textoPrabotar;
             itensDisplayed.Add(inventory.Container[i], obj);
         }
     }

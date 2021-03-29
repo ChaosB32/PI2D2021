@@ -97,7 +97,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8537302497782884437, guid: 653c0bd06644c9e49b08d53297f9d7f9, type: 3}
       propertyPath: m_Name
-      value: slot Variant
+      value: slotmachado
+      objectReference: {fileID: 0}
+    - target: {fileID: 8932458117842377057, guid: 653c0bd06644c9e49b08d53297f9d7f9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: AddCoins
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 653c0bd06644c9e49b08d53297f9d7f9, type: 3}
