@@ -13,20 +13,11 @@ public class PlayerController : MonoBehaviour
     public InventoryObject inventory;
     public ShopObject shop;
     public GameObject inventoryPanel;
-    public bool inventoryShow = false;
+    public bool inventoryShow = false;  
 
     public GameObject shopPanel;
     public bool shopShow = false;
 
-    //Instanciar Arvore
-    public GameObject arvorePrefab;
-    public bool triggerEntered;
-    public Collider2D[] colliderArvore;
-
-    //Pedra
-    public GameObject pedraPrefab;
-    public bool triggerEnteredPedra;
-    public Collider2D[] colliderPedra;
 
     // Start is called before the first frame update
     void Start()
@@ -63,22 +54,7 @@ public class PlayerController : MonoBehaviour
                 inventoryPanel.SetActive(false);
             }
         }
-        if (Input.GetMouseButtonDown(0) && triggerEntered == true)
-        {
-            for (int i = 0; i < colliderArvore.Length; i++)
-            {
-                Instantiate(arvorePrefab, new Vector3(colliderArvore[i].transform.position.x, colliderArvore[i].transform.position.y, 0), Quaternion.identity);
-                Destroy(colliderArvore[i].gameObject);
-            }
-        }
-        if (Input.GetMouseButtonDown(0) && triggerEnteredPedra == true)
-        {
-            for (int i = 0; i < colliderPedra.Length; i++)
-            {
-                Instantiate(pedraPrefab, new Vector3(colliderPedra[i].transform.position.x, colliderPedra[i].transform.position.y, 0), Quaternion.identity);
-                Destroy(colliderPedra[i].gameObject);
-            }
-        }
+        
 
     }
     void UpdateAnimationAndMove()
@@ -104,7 +80,6 @@ public class PlayerController : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D collision)
     {
         var item = collision.GetComponent<Item>();
-
         if (item)
         {
             inventory.AddItem(item.item, 1);
@@ -118,15 +93,6 @@ public class PlayerController : MonoBehaviour
                 shopPanel.SetActive(true);
             }
         }
-        if (collision.gameObject.tag == "Arvore")
-        {
-            triggerEntered = true;
-        }
-        if (collision.gameObject.tag == "Pedra")
-        {
-            triggerEnteredPedra = true;
-        }
-
     }
     public void OnTriggerExit2D(Collider2D collision)
     {
@@ -138,16 +104,8 @@ public class PlayerController : MonoBehaviour
                 shopPanel.SetActive(false);
             }
         }
-        if (collision.gameObject.tag == "Arvore")
-        {
-            triggerEntered = false;
-        }
-        if (collision.gameObject.tag == "Pedra")
-        {
-            triggerEnteredPedra = false;
-        }
     }
-
+    
     private void OnApplicationQuit()
     {
         inventory.Container.Clear(); 
