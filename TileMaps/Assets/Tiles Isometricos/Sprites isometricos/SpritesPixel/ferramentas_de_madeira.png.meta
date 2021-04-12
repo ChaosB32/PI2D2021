@@ -1,13 +1,19 @@
 fileFormatVersion: 2
-guid: f8010265a1b76394b84b2d34437afdd3
+guid: dd5987b140ca7fb4a90c36cd6d1522a3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6549067429433361032
-    second: panelsUI_0
+      213: 2848888897430548881
+    second: ferramentas_de_madeira_0
   - first:
-      213: -4264761614252220247
-    second: panelsUI_1
+      213: -6795597870516597312
+    second: ferramentas_de_madeira_1
+  - first:
+      213: 6736959505950065090
+    second: ferramentas_de_madeira_2
+  - first:
+      213: -2938616424427168479
+    second: ferramentas_de_madeira_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -38,7 +44,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -49,10 +55,10 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -74,7 +80,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -86,7 +92,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -98,7 +104,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -109,13 +115,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: panelsUI_0
+      name: ferramentas_de_madeira_0
       rect:
         serializedVersion: 2
-        x: 78
-        y: 209
-        width: 495
-        height: 361
+        x: 20
+        y: 14
+        width: 36
+        height: 41
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -123,20 +129,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 87d3b821fd90d15a0800000000000000
-      internalID: -6549067429433361032
+      spriteID: 191f6efab59498720800000000000000
+      internalID: 2848888897430548881
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: panelsUI_1
+      name: ferramentas_de_madeira_1
       rect:
         serializedVersion: 2
-        x: 713
-        y: 209
-        width: 495
-        height: 361
+        x: 95
+        y: 15
+        width: 16
+        height: 39
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,8 +150,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a066c258e580d4c0800000000000000
-      internalID: -4264761614252220247
+      spriteID: 0cd057bcdbf21b1a0800000000000000
+      internalID: -6795597870516597312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ferramentas_de_madeira_2
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 11
+        width: 19
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c1485a0afc7e7d50800000000000000
+      internalID: 6736959505950065090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ferramentas_de_madeira_3
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 25
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12dd3e27eefe737d0800000000000000
+      internalID: -2938616424427168479
       vertices: []
       indices: 
       edges: []
