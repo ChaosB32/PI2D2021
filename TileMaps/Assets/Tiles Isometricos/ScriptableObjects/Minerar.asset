@@ -9,10 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68bae2cc7c27ca041bc4206e6f6dfab6, type: 3}
-  m_Name: Picareta
+  m_Script: {fileID: 11500000, guid: 1fc8a614a56d9974e9a7abe924d4edc6, type: 3}
+  m_Name: Minerar
   m_EditorClassIdentifier: 
-  Name: Picareta
-  stackable: 0
-  icon: {fileID: 2848888897430548881, guid: dd5987b140ca7fb4a90c36cd6d1522a3, type: 3}
-  onAction: {fileID: 11400000, guid: ec505b3662caf5a4f813c7b504b1de58, type: 2}
+  sizeOfInteractableArea: 1
+  canHitNodesOfType: 02000000

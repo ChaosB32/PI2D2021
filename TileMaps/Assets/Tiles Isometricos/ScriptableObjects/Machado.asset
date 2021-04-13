@@ -15,3 +15,4 @@ MonoBehaviour:
   Name: Machado
   stackable: 0
   icon: {fileID: -6795597870516597312, guid: dd5987b140ca7fb4a90c36cd6d1522a3, type: 3}
+  onAction: {fileID: 11400000, guid: 96aecae225f40974e8fff0c1240b0a12, type: 2}
