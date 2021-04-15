@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2a4bfb5cc3825742b1398b30de9a40d, type: 3}
-  m_Name: NoPlowable
+  m_Name: NotPlowable
   m_EditorClassIdentifier: 
   tiles:
   - {fileID: 11400000, guid: 08cead8b70f7a0744b7b975f873b6def, type: 2}

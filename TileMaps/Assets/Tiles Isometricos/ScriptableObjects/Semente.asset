@@ -10,10 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 68bae2cc7c27ca041bc4206e6f6dfab6, type: 3}
-  m_Name: Pedra
+  m_Name: Semente
   m_EditorClassIdentifier: 
-  Name: Pedra
+  Name: Semente
   stackable: 1
-  icon: {fileID: -3445512404435217578, guid: a71549ca4141f2b4dbb220b4694f9651, type: 3}
+  icon: {fileID: 21300000, guid: e4a05284ff97e60419331430a50cb219, type: 3}
   onAction: {fileID: 0}
-  onTileMapAction: {fileID: 0}
+  onTileMapAction: {fileID: 11400000, guid: b13c6a0f1d61712498cc3cda95f5ee32, type: 2}
+  onItemUsed: {fileID: 11400000, guid: b13c6a0f1d61712498cc3cda95f5ee32, type: 2}
+  crop: {fileID: 11400000, guid: 27abad66c7ef6a04d88a2522b19f1eea, type: 2}

@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68bae2cc7c27ca041bc4206e6f6dfab6, type: 3}
   m_Name: FerArar
   m_EditorClassIdentifier: 
-  Name: 
+  Name: FerArar
   stackable: 0
   icon: {fileID: 6736959505950065090, guid: dd5987b140ca7fb4a90c36cd6d1522a3, type: 3}
+  onAction: {fileID: 0}
+  onTileMapAction: {fileID: 11400000, guid: 54762df71f708f14cab9794aca4330f1, type: 2}
+  onItemUsed: {fileID: 0}
+  crop: {fileID: 0}

@@ -9,4 +9,17 @@ public class ToolAction : ScriptableObject
         Debug.LogWarning("OnApply não está implementado");
         return true;
     }
+
+    public virtual bool OnApplyToTileMap(Vector3Int gridPosition,TileMapReadController tileMapReadController
+        ,Item item)
+    {
+
+        Debug.LogWarning("OnApplyToTileMap não está implementado");
+        return true;
+    }
+
+    public virtual void OnItemUsed(Item usedItem, ItemContainer inventory)
+    {
+
+    }
 }

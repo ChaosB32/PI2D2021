@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 6201632349164908750}
   - component: {fileID: 6201632349164908751}
   - component: {fileID: 6201632349164908744}
+  - component: {fileID: -6988529444031691301}
+  - component: {fileID: 3550576876162718272}
   m_Layer: 0
   m_Name: Arvore
   m_TagString: Untagged
@@ -128,3 +130,31 @@ MonoBehaviour:
   itemCountInOneDrop: 1
   dropCount: 5
   nodeType: 1
+--- !u!114 &-6988529444031691301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6201632349164908745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ca33ab17919765429d6d555a4b608c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3550576876162718272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6201632349164908745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7956dcfccb7f0664fa8de45fc521c4d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toSpawn: {fileID: 11400000, guid: dc228a94a78aa844d8aaace24e4e3f2a, type: 2}
+  count: 1
+  spread: 2
+  probability: 0.5

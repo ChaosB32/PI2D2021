@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class DayTimeController : MonoBehaviour
 {
     const float secondsInDay = 86400f;
+    const float phaseLenght = 28800f; // 8hrs
 
     [SerializeField] Color nightLightColor;
     [SerializeField] AnimationCurve nightTimeCurve; 
@@ -14,10 +15,32 @@ public class DayTimeController : MonoBehaviour
     
     float time;
     [SerializeField] float timeScale = 60f;
+    [SerializeField] float startAtTime = 28800f; //8horas da manha
 
     [SerializeField] Text text;
     [SerializeField] Light2D globalLight;
     private int days;
+
+    List<TimeAgent> agents;
+
+    private void Awake()
+    {
+        agents = new List<TimeAgent>();
+    }
+
+    private void Start()
+    {
+        time = startAtTime;
+    }
+
+    public void Subscribe(TimeAgent timeAgent)
+    {
+        agents.Add(timeAgent);
+    }
+    public void UnSubscribe(TimeAgent timeAgent)
+    {
+        agents.Remove(timeAgent);
+    }
 
     float Horas
     {
@@ -31,17 +54,48 @@ public class DayTimeController : MonoBehaviour
     private void Update()
     {
         time += Time.deltaTime * timeScale;
-        int hh = (int)Horas;
-        int mm = (int)Minutos;
-        text.text = hh.ToString("00") + ":" + mm.ToString("00");
-        float v = nightTimeCurve.Evaluate(Horas);
-        Color c = Color.Lerp(dayLightColor, nightLightColor, v);
-        globalLight.color = c;
-        if(time> secondsInDay)
+
+        TimeValueCalculation();
+        DayLight();
+
+        if (time > secondsInDay)
         {
             NextDay();
         }
+
+        TimeAgents();
     }
+
+    private void TimeValueCalculation()
+    {
+        int hh = (int)Horas;
+        int mm = (int)Minutos;
+        text.text = hh.ToString("00") + ":" + mm.ToString("00");
+    }
+
+    private void DayLight()
+    {
+        float v = nightTimeCurve.Evaluate(Horas);
+        Color c = Color.Lerp(dayLightColor, nightLightColor, v);
+        globalLight.color = c;
+    }
+
+    int oldPhase = 0;
+
+    private void TimeAgents()
+    {
+        int phase = (int)(time / phaseLenght);
+
+        if (oldPhase != phase)
+        {
+            oldPhase = phase;
+            for (int i = 0; i < agents.Count; i++)
+            {
+                agents[i].Invoke();
+            }
+        }
+    }
+
     private void NextDay()
     {
         time = 0;

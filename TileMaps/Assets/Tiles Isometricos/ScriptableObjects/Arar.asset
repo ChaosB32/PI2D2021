@@ -9,11 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68bae2cc7c27ca041bc4206e6f6dfab6, type: 3}
-  m_Name: Pedra
+  m_Script: {fileID: 11500000, guid: 88ddb42948c48b14090781b673612046, type: 3}
+  m_Name: Arar
   m_EditorClassIdentifier: 
-  Name: Pedra
-  stackable: 1
-  icon: {fileID: -3445512404435217578, guid: a71549ca4141f2b4dbb220b4694f9651, type: 3}
-  onAction: {fileID: 0}
-  onTileMapAction: {fileID: 0}
+  canPlow:
+  - {fileID: 11400000, guid: 1d3bc379c66739f47945c4e971ef9902, type: 2}

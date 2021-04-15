@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf43a8d4b7ee4b042afe7c3986695c80, type: 3}
+  m_Name: Cenoura
+  m_EditorClassIdentifier: 
+  timeToGrow: 13
+  yield: {fileID: 11400000, guid: 24c86126cdc55c547b2f1830d5ab7def, type: 2}
+  count: 1
+  sprites:
+  - {fileID: -1862898335591972230, guid: 37ad18978c855724a8d8f2c9f79c4b7d, type: 3}
+  - {fileID: -7018533466929595096, guid: 37ad18978c855724a8d8f2c9f79c4b7d, type: 3}
+  - {fileID: 3991993824758296532, guid: 37ad18978c855724a8d8f2c9f79c4b7d, type: 3}
+  growthStageTime: 04000000070000000d000000
