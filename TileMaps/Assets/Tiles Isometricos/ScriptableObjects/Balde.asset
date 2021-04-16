@@ -13,5 +13,9 @@ MonoBehaviour:
   m_Name: Balde
   m_EditorClassIdentifier: 
   Name: Balde
-  stackable: 0
+  stackable: 1
   icon: {fileID: -2938616424427168479, guid: dd5987b140ca7fb4a90c36cd6d1522a3, type: 3}
+  onAction: {fileID: 0}
+  onTileMapAction: {fileID: 0}
+  onItemUsed: {fileID: 0}
+  crop: {fileID: 0}

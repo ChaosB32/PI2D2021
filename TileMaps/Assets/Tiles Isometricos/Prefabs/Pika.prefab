@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: -578693015
   m_SortingLayer: 1
   m_SortingOrder: 2
-  m_Sprite: {fileID: 3991993824758296532, guid: 37ad18978c855724a8d8f2c9f79c4b7d, type: 3}
+  m_Sprite: {fileID: 989524208980819815, guid: 53e33ffffd37c3e4bacf49ffb39d87d6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -155,9 +155,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
-  inventory: {fileID: 0}
-  shop: {fileID: 0}
-  inventoryPanel: {fileID: 0}
-  inventoryShow: 0
-  shopPanel: {fileID: 0}
-  shopShow: 0
