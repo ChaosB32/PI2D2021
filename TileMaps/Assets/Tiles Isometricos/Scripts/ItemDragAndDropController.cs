@@ -8,9 +8,13 @@ using UnityEngine.UI;
 public class ItemDragAndDropController : MonoBehaviour
 {
     [SerializeField] ItemSlot itemSlot;
+    [SerializeField] ItemSlot shopSlot;
     [SerializeField] GameObject ItemIcon;
+   
     RectTransform iconTransform;
     Image itemIconImage;
+
+    
 
     private void Start()
     {
@@ -60,6 +64,23 @@ public class ItemDragAndDropController : MonoBehaviour
 
             itemSlot.Copy(this.itemSlot);
             this.itemSlot.Set(item, count);
+        }
+        UpdateIcon();
+    }
+    internal void OnClickShop(ItemSlot shopSlot)
+    {
+        if (this.shopSlot.item == null)
+        {
+            this.shopSlot.Copy(shopSlot);
+            shopSlot.Clear();
+        }
+        else
+        {
+            Item item = shopSlot.item;
+            int count = shopSlot.count;
+
+            shopSlot.Copy(this.shopSlot);
+            this.shopSlot.Set(item, count);
         }
         UpdateIcon();
     }

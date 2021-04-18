@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 [Serializable]
@@ -25,12 +26,15 @@ public class ItemSlot
     {
         item = null;
         count = 0;
+       
     }
+
 }
 
 [CreateAssetMenu(menuName ="Data/Item Container")]
 public class ItemContainer : ScriptableObject
 {
+    
     public List<ItemSlot> slots;
 
     public void Add(Item item, int count = 1)
@@ -72,6 +76,7 @@ public class ItemContainer : ScriptableObject
             if(itemSlot.count < 0)
             {
                 itemSlot.Clear();
+                
             }
         }
         else
@@ -82,7 +87,6 @@ public class ItemContainer : ScriptableObject
 
                 ItemSlot itemSlot = slots.Find(x => x.item == itemToRemove);
                 if(itemSlot == null) { return; }
-
                 itemSlot.Clear();
             }
         }
@@ -110,4 +114,5 @@ public class ItemContainer : ScriptableObject
 
         return true;
     }
+    
 }

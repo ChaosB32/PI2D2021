@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 50580ca4b776b2e4b8bcdad4a9128f0c, type: 3}
-  m_Name: Inventario
+  m_Name: Loja
   m_EditorClassIdentifier: 
   slots:
   - item: {fileID: 11400000, guid: dc228a94a78aa844d8aaace24e4e3f2a, type: 2}
-    count: 63
-  - item: {fileID: 11400000, guid: 5c1ef962944de6a44a9aa40d5912dc21, type: 2}
-    count: 2
-  - item: {fileID: 11400000, guid: ff4396cc474ddfd4cab2fbb90f670444, type: 2}
-    count: 2
-  - item: {fileID: 11400000, guid: e84cc9686ae98ea42b4e0218e4f5f402, type: 2}
-    count: 1
-  - item: {fileID: 11400000, guid: 24c86126cdc55c547b2f1830d5ab7def, type: 2}
-    count: 40
+    count: 50
+  - item: {fileID: 11400000, guid: 976c6e213d616df43a92a8f00eb68dcf, type: 2}
+    count: 5
+  - item: {fileID: 0}
+    count: 0
+  - item: {fileID: 0}
+    count: 0
+  - item: {fileID: 0}
+    count: 0
   - item: {fileID: 0}
     count: 0
   - item: {fileID: 0}

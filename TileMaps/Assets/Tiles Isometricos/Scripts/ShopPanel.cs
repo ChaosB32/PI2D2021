@@ -1,14 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
-public class ItemPanel : MonoBehaviour
+public class ShopPanel : MonoBehaviour
 {
-    public ItemContainer inventory;
+    public ItemContainer shop;
     public List<InventoryButton> buttons;
-
-    
 
     private void Start()
     {
@@ -36,16 +33,15 @@ public class ItemPanel : MonoBehaviour
 
     public virtual void Show()
     {
-        for (int i = 0; i < inventory.slots.Count && i < buttons.Count; i++)
+        for (int i = 0; i < shop.slots.Count && i < buttons.Count; i++)
         {
-            if (inventory.slots[i].item == null)
+            if (shop.slots[i].item == null)
             {
                 buttons[i].Clean();
-                
             }
             else
             {
-                buttons[i].Set(inventory.slots[i]);
+                buttons[i].Set(shop.slots[i]);
             }
         }
     }
@@ -53,9 +49,4 @@ public class ItemPanel : MonoBehaviour
     {
 
     }
-    public virtual void OnClickShop(int id)
-    {
-
-    }
-
 }

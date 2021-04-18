@@ -9,6 +9,9 @@ public class PlayerController : MonoBehaviour
     private Vector3 change;
     private Animator animator;
 
+    //loja
+    public GameObject shopScreen;
+    public bool shopShow = false;
 
 
     // Start is called before the first frame update
@@ -25,9 +28,6 @@ public class PlayerController : MonoBehaviour
         change.x = Input.GetAxisRaw("Horizontal");
         change.y = Input.GetAxisRaw("Vertical");
         UpdateAnimationAndMove();
-        
-        
-        
 
     }
     void UpdateAnimationAndMove()
@@ -50,5 +50,29 @@ public class PlayerController : MonoBehaviour
             transform.position + change 
             * speed * Time.deltaTime);
     }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Loja")
+        {
+            if (shopShow == false)
+            {
+                shopShow = true;
+                shopScreen.SetActive(true);
+            }
+        }
+    }
+    public void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Loja")
+        {
+            if (shopShow == true)
+            {
+                shopShow = false;
+                shopScreen.SetActive(false);
+            }
+        }
+    }
+
 
 }

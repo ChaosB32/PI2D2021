@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fa30e8e4bb10b854aa8261643431d16d, type: 3}
-  m_Name: ReceitaCraft
+  m_Name: ReceitaPicareta
   m_EditorClassIdentifier: 
   elements:
   - item: {fileID: 11400000, guid: dc228a94a78aa844d8aaace24e4e3f2a, type: 2}
-    count: 5
+    count: 20
   output:
-    item: {fileID: 11400000, guid: e84cc9686ae98ea42b4e0218e4f5f402, type: 2}
-    count: 1
+    item: {fileID: 11400000, guid: 63797d7d53b190f40adffa06667dba9b, type: 2}
+    count: 0
