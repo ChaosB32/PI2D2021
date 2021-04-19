@@ -14,4 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Madeira
   stackable: 1
-  icon: {fileID: -4030797033374710886, guid: cb66202ee39720940b5c39eb4e1e6dd2, type: 3}
+  icon: {fileID: -1951860770725164454, guid: 6cf5e012362884a4eb312a73f1575dc3, type: 3}
+  onAction: {fileID: 0}
+  onTileMapAction: {fileID: 0}
+  onItemUsed: {fileID: 0}
+  crop: {fileID: 0}

@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: Marker
+  m_Name: plantacao_0
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 21300000, guid: 2ed2ec21e7dc2924483d3ece58bfa818, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.22745098}
+  m_Sprite: {fileID: 274717476303419204, guid: 8ec93bce60483b14b821c862408d0321, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
     e01: 0

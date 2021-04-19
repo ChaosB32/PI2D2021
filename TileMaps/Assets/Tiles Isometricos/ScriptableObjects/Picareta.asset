@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: Picareta
   m_EditorClassIdentifier: 
   Name: Picareta
-  stackable: 0
+  stackable: 1
   icon: {fileID: 2848888897430548881, guid: dd5987b140ca7fb4a90c36cd6d1522a3, type: 3}
   onAction: {fileID: 11400000, guid: ec505b3662caf5a4f813c7b504b1de58, type: 2}
+  onTileMapAction: {fileID: 0}
+  onItemUsed: {fileID: 0}
+  crop: {fileID: 0}

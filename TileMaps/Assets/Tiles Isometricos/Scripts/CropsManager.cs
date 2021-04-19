@@ -59,7 +59,7 @@ public class CropsManager : TimeAgent
 
             cropTile.damage += 0.02f;
 
-            if (cropTile.damage > 1f)
+            if (cropTile.damage > 0.5f)
             {
                 cropTile.Harvested();
                 targetTilemap.SetTile(cropTile.position, plowed);

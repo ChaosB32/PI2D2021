@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf43a8d4b7ee4b042afe7c3986695c80, type: 3}
   m_Name: Cenoura
   m_EditorClassIdentifier: 
-  timeToGrow: 13
+  timeToGrow: 9
   yield: {fileID: 11400000, guid: 24c86126cdc55c547b2f1830d5ab7def, type: 2}
   count: 5
   sprites:
-  - {fileID: -1862898335591972230, guid: 37ad18978c855724a8d8f2c9f79c4b7d, type: 3}
-  - {fileID: -7018533466929595096, guid: 37ad18978c855724a8d8f2c9f79c4b7d, type: 3}
-  - {fileID: 3991993824758296532, guid: 37ad18978c855724a8d8f2c9f79c4b7d, type: 3}
-  growthStageTime: 04000000070000000d000000
+  - {fileID: 3159610603100037371, guid: 5c1612e0308b2fc4e86ebc0b95cbb152, type: 3}
+  - {fileID: 6555378455360727220, guid: 5c1612e0308b2fc4e86ebc0b95cbb152, type: 3}
+  - {fileID: -2789016432650415108, guid: 5c1612e0308b2fc4e86ebc0b95cbb152, type: 3}
+  growthStageTime: 030000000600000009000000

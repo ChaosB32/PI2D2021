@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -14,7 +15,8 @@ public class ItemDragAndDropController : MonoBehaviour
     RectTransform iconTransform;
     Image itemIconImage;
 
-    
+    public int coins = 1;
+    public TMP_Text coinUI;
 
     private void Start()
     {
@@ -41,12 +43,28 @@ public class ItemDragAndDropController : MonoBehaviour
                         itemSlot.item,
                         itemSlot.count
                         );
-
                     itemSlot.Clear();
                     ItemIcon.SetActive(false);
+                    AddCoins();
                 }
             }
-            
+            if (Input.GetMouseButtonDown(1))
+            {
+                if (EventSystem.current.IsPointerOverGameObject() == false)
+                {
+                    Vector3 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                    worldPosition.z = 0;
+
+                    ItemSpawnManager.instance.SpawnItem(
+                        worldPosition,
+                        itemSlot.item,
+                        itemSlot.count
+                        );
+                    itemSlot.Clear();
+                    ItemIcon.SetActive(false);
+                    RemoveCoins();
+                }
+            }
         }
     }
 
@@ -56,6 +74,7 @@ public class ItemDragAndDropController : MonoBehaviour
         {
             this.itemSlot.Copy(itemSlot);
             itemSlot.Clear();
+            
         }
         else
         {
@@ -95,6 +114,18 @@ public class ItemDragAndDropController : MonoBehaviour
         {
             ItemIcon.SetActive(true);
             itemIconImage.sprite = itemSlot.item.icon;
+            
         }
+    }
+    public void AddCoins()
+    {
+        coins++;
+        coinUI.text = coins.ToString();
+    }
+    public void RemoveCoins()
+    {
+
+        coins--;
+        coinUI.text = coins.ToString();
     }
 }

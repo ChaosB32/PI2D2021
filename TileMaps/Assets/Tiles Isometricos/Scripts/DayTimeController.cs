@@ -9,6 +9,8 @@ public class DayTimeController : MonoBehaviour
     const float secondsInDay = 86400f;
     const float phaseLenght = 28800f; // 8hrs
 
+    
+
     [SerializeField] Color nightLightColor;
     [SerializeField] AnimationCurve nightTimeCurve; 
     [SerializeField] Color dayLightColor = Color.white;

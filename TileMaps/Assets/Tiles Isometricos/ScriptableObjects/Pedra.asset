@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Pedra
   stackable: 1
-  icon: {fileID: -3445512404435217578, guid: a71549ca4141f2b4dbb220b4694f9651, type: 3}
+  icon: {fileID: -6901165288912675795, guid: 3bdebe172cda6ea41b26c6272b41642b, type: 3}
   onAction: {fileID: 0}
   onTileMapAction: {fileID: 0}
+  onItemUsed: {fileID: 0}
+  crop: {fileID: 0}

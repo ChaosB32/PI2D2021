@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Enxada
   m_EditorClassIdentifier: 
   Name: Enxada
-  stackable: 0
+  stackable: 1
   icon: {fileID: 6736959505950065090, guid: dd5987b140ca7fb4a90c36cd6d1522a3, type: 3}
   onAction: {fileID: 0}
   onTileMapAction: {fileID: 11400000, guid: 54762df71f708f14cab9794aca4330f1, type: 2}
