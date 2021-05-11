@@ -6,9 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Tiles Isometricos/TilesIsometricos.unity
+    path: Assets/Tiles Isometricos/Scenes/Menu.unity
+    guid: 76289890450845a4e90c8ef5ba3c6ccb
+  - enabled: 1
+    path: Assets/Tiles Isometricos/Scenes/Jogo.unity
     guid: 7b924a152be1ff44cb3d866d25a52fbb
   m_configObjects: {}

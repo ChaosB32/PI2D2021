@@ -15,11 +15,18 @@ public class ItemDragAndDropController : MonoBehaviour
     RectTransform iconTransform;
     Image itemIconImage;
 
-    public int coins = 1;
+    public int coins;
     public TMP_Text coinUI;
+
+    //tentativa pontuacao
+    public static ItemDragAndDropController instance;
+
 
     private void Start()
     {
+        instance = this;
+        
+
         itemSlot = new ItemSlot();
         iconTransform = ItemIcon.GetComponent<RectTransform>();
         itemIconImage = ItemIcon.GetComponent<Image>();
@@ -121,11 +128,17 @@ public class ItemDragAndDropController : MonoBehaviour
     {
         coins++;
         coinUI.text = coins.ToString();
+
+        //PlayerPrefs.SetInt("Pontuação", coins);
+        //PlayerPrefs.Save();
     }
     public void RemoveCoins()
     {
 
         coins--;
         coinUI.text = coins.ToString();
+
+        //PlayerPrefs.SetInt("Pontuação", coins);
+        //PlayerPrefs.Save();
     }
 }
