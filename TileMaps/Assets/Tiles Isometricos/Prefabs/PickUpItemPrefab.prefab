@@ -100,3 +100,4 @@ MonoBehaviour:
   ttl: 7
   item: {fileID: 11400000, guid: dc228a94a78aa844d8aaace24e4e3f2a, type: 2}
   count: 1
+  sfxPegar: {fileID: 8300000, guid: ad05c7568e68ea84d972d23eb44a7c6f, type: 3}

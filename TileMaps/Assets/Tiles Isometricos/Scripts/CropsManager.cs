@@ -13,6 +13,7 @@ public class CropTile
     public float damage; //plantacao
     public Vector3Int position;
 
+
     public bool Complete
     {
         get
@@ -37,7 +38,12 @@ public class CropsManager : TimeAgent
     [SerializeField] TileBase plowed;
     [SerializeField] TileBase seeded;
 
-    
+    //sfx
+    [SerializeField] AudioClip sfxCompleted;
+    [SerializeField] AudioClip sfxPlow;
+
+    //visual
+    [SerializeField] GameObject readyMessage;
 
     [SerializeField] Tilemap targetTilemap;
     [SerializeField] GameObject cropsSpritePrefab;
@@ -55,7 +61,9 @@ public class CropsManager : TimeAgent
     {
         foreach (CropTile cropTile in crops.Values)
         {
-            if(cropTile.crop == null) { continue; }
+            if(cropTile.crop == null) {
+                readyMessage.SetActive(false);
+                continue; }
 
             cropTile.damage += 0.02f;
 
@@ -69,6 +77,8 @@ public class CropsManager : TimeAgent
             if (cropTile.Complete)
             {
                 Debug.Log("Pronto para colher");
+                AudioManager.instance.Play(sfxCompleted);
+                readyMessage.SetActive(true);
                 continue;
             }
 
@@ -96,6 +106,7 @@ public class CropsManager : TimeAgent
         {
             return;
         }
+        AudioManager.instance.Play(sfxPlow);
         CreatePlowedTile(position);
     }
 

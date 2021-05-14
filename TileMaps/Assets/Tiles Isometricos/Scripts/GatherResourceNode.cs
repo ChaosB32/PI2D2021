@@ -14,8 +14,6 @@ public class GatherResourceNode : ToolAction
 {
     [SerializeField] float sizeOfInteractableArea = 1f;
     [SerializeField] List<ResourceNodeType> canHitNodesOfType;
-    //sfx
-    //[SerializeField] AudioClip sfxAcoes;
 
     public override bool OnApply(Vector2 worldPoint)
     {
@@ -31,8 +29,6 @@ public class GatherResourceNode : ToolAction
                 {
                     hit.Hit();
                     return true;
-                    //sfx
-                    //audioSource.PlayOneShot(sfxAcoes);
                 }
             }
         }

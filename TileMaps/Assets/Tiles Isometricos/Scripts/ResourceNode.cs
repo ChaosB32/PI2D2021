@@ -14,9 +14,19 @@ public class ResourceNode : ToolHit
     [SerializeField] int dropCount = 5;
     [SerializeField] ResourceNodeType nodeType;
 
+    [SerializeField] AudioClip sfxAcoes;
+
+    //dano/durabilidade
+    [SerializeField] int dano;
+
     public override void Hit()
     {
-        while (dropCount > 0)
+        if (dano > 0)
+        {
+            dano--;
+            AudioManager.instance.Play(sfxAcoes);
+        }
+        while (dropCount > 0 && dano<=0)
         {
             dropCount -= 1;
 
@@ -26,8 +36,11 @@ public class ResourceNode : ToolHit
 
             ItemSpawnManager.instance.SpawnItem(position, item, itemCountInOneDrop);
         }
-
-        Destroy(gameObject);
+        
+        if(dano <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     public override bool CanBeHit(List<ResourceNodeType> canBeHit)

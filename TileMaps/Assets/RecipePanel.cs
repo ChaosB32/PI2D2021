@@ -7,6 +7,8 @@ public class RecipePanel : ItemPanel
     [SerializeField] RecipeList recipeList;
     [SerializeField] Crafting crafting;
 
+    [SerializeField] AudioClip sfxCraft;
+
     public override void Show()
     {
         for(int i=0;i<buttons.Count&& i< recipeList.recipes.Count; i++)
@@ -19,5 +21,6 @@ public class RecipePanel : ItemPanel
         if(id>= recipeList.recipes.Count) { return; }
 
         crafting.Craft(recipeList.recipes[id]);
+        AudioManager.instance.Play(sfxCraft);
     }
 }

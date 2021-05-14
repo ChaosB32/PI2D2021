@@ -12,6 +12,8 @@ public class PickUpItem : MonoBehaviour
     public Item item;
     public int count = 1;
 
+    [SerializeField] AudioClip sfxPegar;
+
     private void Awake()
     {
         player = GameManager.instance.player.transform;
@@ -51,7 +53,8 @@ public class PickUpItem : MonoBehaviour
             {
                 Debug.LogWarning("No inventory container in gameManager");
             }
-
+            AudioManager.instance.Play(sfxPegar);
+            
             Destroy(gameObject);
         }
     }

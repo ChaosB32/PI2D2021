@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
     public GameObject shopScreen;
     public bool shopShow = false;
 
+    [SerializeField] AudioClip sfxMove;
+
 
     // Start is called before the first frame update
     void Start()
@@ -38,10 +40,13 @@ public class PlayerController : MonoBehaviour
             animator.SetFloat("moveX", change.x);
             animator.SetFloat("moveY", change.y);
             animator.SetBool("moving", true);
+            AudioManager.instance.PlayWalk(sfxMove);
+
         }
         else
         {
             animator.SetBool("moving", false);
+            AudioManager.instance.StopWalk(sfxMove);
         }
     }
     void MoveCharacter()
@@ -49,6 +54,7 @@ public class PlayerController : MonoBehaviour
         myRigidbody.MovePosition(
             transform.position + change 
             * speed * Time.deltaTime);
+        
     }
 
     public void OnTriggerEnter2D(Collider2D collision)

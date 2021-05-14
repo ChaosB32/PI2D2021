@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74b1e107deb7e8841879da32be3113df, type: 3}
   m_Name: Plantar
   m_EditorClassIdentifier: 
+  sfxSeed: {fileID: 8300000, guid: 7960123d3f2812b43ad3b5c1f69d9a5a, type: 3}

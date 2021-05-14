@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Data/Tool action/Seed Tile")]
 public class SeedTile : ToolAction
 {
+    [SerializeField] AudioClip sfxSeed;
     public override bool OnApplyToTileMap(Vector3Int gridPosition, TileMapReadController tileMapReadController
         , Item item)
     {
@@ -13,7 +14,7 @@ public class SeedTile : ToolAction
             return false;
         }
         tileMapReadController.cropsManager.Seed(gridPosition,item.crop);
-
+        AudioManager.instance.Play(sfxSeed);
         return true;
     }
 
