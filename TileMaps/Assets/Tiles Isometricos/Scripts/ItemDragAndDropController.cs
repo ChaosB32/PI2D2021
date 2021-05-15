@@ -52,7 +52,7 @@ public class ItemDragAndDropController : MonoBehaviour
                         );
                     itemSlot.Clear();
                     ItemIcon.SetActive(false);
-                    AddCoins();
+                    AddCoins(1);
                 }
             }
             if (Input.GetMouseButtonDown(1))
@@ -69,7 +69,7 @@ public class ItemDragAndDropController : MonoBehaviour
                         );
                     itemSlot.Clear();
                     ItemIcon.SetActive(false);
-                    RemoveCoins();
+                    RemoveCoins(1);
                 }
             }
         }
@@ -124,21 +124,22 @@ public class ItemDragAndDropController : MonoBehaviour
             
         }
     }
-    public void AddCoins()
+    public void AddCoins(float value)
     {
-        coins++;
-        coinUI.text = coins.ToString();
+        coins+= Convert.ToInt32(value);
+        coinUI.text = "x "+coins.ToString();
 
         //PlayerPrefs.SetInt("Pontuação", coins);
         //PlayerPrefs.Save();
     }
-    public void RemoveCoins()
+    public void RemoveCoins(float value)
     {
 
-        coins--;
-        coinUI.text = coins.ToString();
+        coins -= Convert.ToInt32(value);
+        coinUI.text = "x "+coins.ToString();
 
         //PlayerPrefs.SetInt("Pontuação", coins);
         //PlayerPrefs.Save();
     }
+    
 }

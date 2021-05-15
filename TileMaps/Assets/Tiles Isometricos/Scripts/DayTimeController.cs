@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering.Universal;
 using UnityEngine.UI;
+using TMPro;
 
 public class DayTimeController : MonoBehaviour
 {
@@ -24,6 +25,7 @@ public class DayTimeController : MonoBehaviour
     private int days;
 
     List<TimeAgent> agents;
+
 
     private void Awake()
     {
@@ -63,6 +65,7 @@ public class DayTimeController : MonoBehaviour
         if (time > secondsInDay)
         {
             NextDay();
+            RemoveCoins();
         }
 
         TimeAgents();
@@ -102,5 +105,14 @@ public class DayTimeController : MonoBehaviour
     {
         time = 0;
         days += 1;
+    }
+    public void RemoveCoins()
+    {
+
+        ItemDragAndDropController.instance.coins--;
+        ItemDragAndDropController.instance.coinUI.text = "x " + ItemDragAndDropController.instance.coins.ToString();
+
+        //PlayerPrefs.SetInt("Pontuação", coins);
+        //PlayerPrefs.Save();
     }
 }
