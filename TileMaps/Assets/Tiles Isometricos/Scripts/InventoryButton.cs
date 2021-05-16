@@ -11,6 +11,7 @@ public class InventoryButton : MonoBehaviour, IPointerClickHandler
     [SerializeField] Text text;
     [SerializeField] Image highLight;
 
+
     int myIndex;
     
     public void SetIndex(int index)

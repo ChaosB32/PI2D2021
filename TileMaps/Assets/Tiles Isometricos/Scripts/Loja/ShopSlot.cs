@@ -12,6 +12,9 @@ public class ShopSlot : MonoBehaviour
     //loja
     [SerializeField] int buyPrice;
     public Item item;
+    [SerializeField] AudioClip sfxComprar;
+    [SerializeField] AudioClip sfxErro;
+
     int myIndex;
 
     public void Start()
@@ -43,12 +46,14 @@ public class ShopSlot : MonoBehaviour
             ItemDragAndDropController.instance.RemoveCoins(buyPrice);
             if (GameManager.instance.inventoryContainer != null)
             {
+                AudioManager.instance.Play(sfxComprar);
                 GameManager.instance.inventoryContainer.Add(item);
             }
         }
         else
         {
             Debug.Log("Precisa de mais moedas para comprar" + item);
+            AudioManager.instance.Play(sfxErro);
         }
     }
 

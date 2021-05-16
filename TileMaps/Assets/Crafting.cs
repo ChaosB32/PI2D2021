@@ -5,7 +5,8 @@ using UnityEngine;
 public class Crafting : MonoBehaviour
 {
     [SerializeField] ItemContainer inventory;
-
+    [SerializeField] AudioClip sfxCraft;
+    [SerializeField] AudioClip sfxErro;
     public void Craft(CraftingRecipe recipe)
     {
         if(inventory.CheckFreeSpace() == false)
@@ -20,6 +21,7 @@ public class Crafting : MonoBehaviour
             {
                
                 Debug.Log("Os componentes da receita nao estao no inventário");
+                AudioManager.instance.Play(sfxErro);
                 return;
             }
         }
@@ -30,5 +32,6 @@ public class Crafting : MonoBehaviour
         }
 
         inventory.Add(recipe.output.item, recipe.output.count);
+        AudioManager.instance.Play(sfxCraft);
     }
 }

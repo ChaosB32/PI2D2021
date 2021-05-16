@@ -15,8 +15,8 @@ MonoBehaviour:
   icon: {fileID: 0}
   priceText: {fileID: 0}
   highLight: {fileID: 0}
-  buyPrice: 1
-  item: {fileID: 11400000, guid: e84cc9686ae98ea42b4e0218e4f5f402, type: 2}
+  buyPrice: 0
+  item: {fileID: 0}
 --- !u!1001 &5697914711023420215
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26,7 +26,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4916806282623165922, guid: 4ff1db22613da0046bc548dd5fceb0ac, type: 3}
       propertyPath: m_Name
-      value: ShopSlot
+      value: ShopSlot Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4916806282623165923, guid: 4ff1db22613da0046bc548dd5fceb0ac, type: 3}
       propertyPath: m_Pivot.x

@@ -19,3 +19,4 @@ MonoBehaviour:
   onTileMapAction: {fileID: 11400000, guid: 54762df71f708f14cab9794aca4330f1, type: 2}
   onItemUsed: {fileID: 0}
   crop: {fileID: 0}
+  SellPrice: 5

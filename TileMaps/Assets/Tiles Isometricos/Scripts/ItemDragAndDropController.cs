@@ -21,6 +21,10 @@ public class ItemDragAndDropController : MonoBehaviour
     //tentativa pontuacao
     public static ItemDragAndDropController instance;
 
+    public GameObject loja;
+
+    [SerializeField] AudioClip sfxvender;
+
 
     private void Start()
     {
@@ -37,25 +41,28 @@ public class ItemDragAndDropController : MonoBehaviour
         if(ItemIcon.activeInHierarchy == true)
         {
             iconTransform.position = Input.mousePosition;
-
+            //vender na loja
             if (Input.GetMouseButtonDown(0))
             {
-                if (EventSystem.current.IsPointerOverGameObject() == false)
+                if (EventSystem.current.IsPointerOverGameObject() == true && loja.activeInHierarchy == true)
                 {
                     Vector3 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                     worldPosition.z = 0;
 
-                    ItemSpawnManager.instance.SpawnItem(
-                        worldPosition,
-                        itemSlot.item,
-                        itemSlot.count
-                        );
-                    itemSlot.Clear();
-                    ItemIcon.SetActive(false);
-                    AddCoins(1);
+                    AddCoins(itemSlot.item.SellPrice);
+                    itemSlot.count --;
+                    AudioManager.instance.Play(sfxvender);
+                    if (itemSlot.count <= 0)
+                    {
+                        AudioManager.instance.Play(sfxvender);
+                        itemSlot.Clear();
+                        ItemIcon.SetActive(false);
+                    }
+
                 }
             }
-            if (Input.GetMouseButtonDown(1))
+            // jogar item fora
+            if (Input.GetMouseButtonDown(0))
             {
                 if (EventSystem.current.IsPointerOverGameObject() == false)
                 {
