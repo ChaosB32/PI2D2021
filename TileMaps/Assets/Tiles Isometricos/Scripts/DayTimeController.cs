@@ -19,6 +19,7 @@ public class DayTimeController : MonoBehaviour
     float time;
     [SerializeField] float timeScale = 60f;
     [SerializeField] float startAtTime = 28800f; //8horas da manha
+    [SerializeField] AudioClip sfxDayPass;
 
     [SerializeField] Text text;
     [SerializeField] Light2D globalLight;
@@ -65,6 +66,7 @@ public class DayTimeController : MonoBehaviour
         if (time > secondsInDay)
         {
             NextDay();
+            AudioManager.instance.Play(sfxDayPass);
             RemoveCoins();
         }
 
