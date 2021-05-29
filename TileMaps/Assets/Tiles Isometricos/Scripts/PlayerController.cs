@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] AudioClip sfxMove;
 
+    //Quests
+
 
     // Start is called before the first frame update
     void Start()
@@ -67,6 +69,7 @@ public class PlayerController : MonoBehaviour
                 shopScreen.SetActive(true);
             }
         }
+        
     }
     public void OnTriggerExit2D(Collider2D collision)
     {

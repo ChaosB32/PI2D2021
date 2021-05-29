@@ -14,6 +14,9 @@ public class PickUpItem : MonoBehaviour
 
     [SerializeField] AudioClip sfxPegar;
 
+    //quests
+    //public Quests quest;
+
     private void Awake()
     {
         player = GameManager.instance.player.transform;
@@ -21,9 +24,9 @@ public class PickUpItem : MonoBehaviour
 
     public void Set(Item item, int count)
     {
+
         this.item = item;
         this.count = count;
-
         SpriteRenderer renderer = GetComponent<SpriteRenderer>();
         renderer.sprite = item.icon;
     }
@@ -48,14 +51,25 @@ public class PickUpItem : MonoBehaviour
             if (GameManager.instance.inventoryContainer!= null)
             {
                 GameManager.instance.inventoryContainer.Add(item,count);
+
             }
             else
             {
                 Debug.LogWarning("No inventory container in gameManager");
             }
-            AudioManager.instance.Play(sfxPegar);
             
+            AudioManager.instance.Play(sfxPegar);
+            /*
+            if (quest.isActive)
+            {
+                quest.goal.ItemGathered();
+                if (quest.goal.IsReached())
+                {
+                    quest.Complete();
+                }
+            }*/
             Destroy(gameObject);
+            
         }
     }
 }

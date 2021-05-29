@@ -27,6 +27,8 @@ public class DayTimeController : MonoBehaviour
 
     List<TimeAgent> agents;
 
+    //quests
+    public QuestGiver questGiver;
 
     private void Awake()
     {
@@ -35,6 +37,10 @@ public class DayTimeController : MonoBehaviour
 
     private void Start()
     {
+        //iniciar quests
+        questGiver.OpenQuestWindow();
+        //aceitar quests
+        questGiver.AcceptQuest();
         time = startAtTime;
     }
 
