@@ -26940,7 +26940,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &493352603
 GameObject:
@@ -28825,7 +28825,7 @@ Transform:
   - {fileID: 256209220}
   - {fileID: 240069390}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &604946880
 GameObject:
@@ -29263,7 +29263,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &639019173
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -29327,7 +29327,7 @@ Transform:
   m_LocalScale: {x: 0.16569352, y: 0.63728285, z: 0.63728285}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &642216083
 GameObject:
@@ -29832,13 +29832,6 @@ MonoBehaviour:
   inventory: {fileID: 11400000, guid: ed63a046554314a4b8f43d9b2007e3d1, type: 2}
   sfxCraft: {fileID: 8300000, guid: ed6226f820b75b84ba594186a16494d6, type: 3}
   sfxErro: {fileID: 8300000, guid: 793064e8e485a3b47bea4a3f116819a5, type: 3}
-  quest:
-    isActive: 0
-    description: 
-    goal:
-      goalType: 0
-      requiredAmount: 0
-      currentAmount: 0
 --- !u!114 &659201117
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41146,12 +41139,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quest:
     isActive: 0
-    description: Contrua Algum objeto!
+    description: Colete 6 madeirinhas!
     goal:
-      goalType: 1
-      requiredAmount: 1
+      goalType: 0
+      requiredAmount: 6
       currentAmount: 0
-  crafting: {fileID: 659201116}
+  pickUpItem: {fileID: 1766820705994930079, guid: 5d4591c41ad803f4a812b0ba435c3bc5, type: 3}
   questWindow: {fileID: 464434278}
   description: {fileID: 164363119}
 --- !u!4 &1077634167
@@ -41166,7 +41159,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1084935686
 PrefabInstance:
@@ -46733,7 +46726,7 @@ Transform:
   - {fileID: 961216753}
   - {fileID: 948350571}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1668643617
 PrefabInstance:
@@ -49499,7 +49492,7 @@ Transform:
   - {fileID: 2119889241}
   - {fileID: 1945224117}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1891488842
 GameObject:
@@ -49615,7 +49608,7 @@ Transform:
   - {fileID: 2036515989}
   - {fileID: 1709818950}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &1908779702 stripped
 RectTransform:
@@ -51023,6 +51016,7 @@ GameObject:
   - component: {fileID: 2007558616}
   - component: {fileID: 2007558615}
   - component: {fileID: 2007558618}
+  - component: {fileID: 2007558619}
   m_Layer: 0
   m_Name: Loja
   m_TagString: Loja
@@ -51120,7 +51114,7 @@ Transform:
   m_Children:
   - {fileID: 931078360}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!70 &2007558618
 CapsuleCollider2D:
@@ -51138,6 +51132,21 @@ CapsuleCollider2D:
   m_Offset: {x: 0.007696867, y: -0.061574638}
   m_Size: {x: 0.57438135, y: 0.5743815}
   m_Direction: 0
+--- !u!114 &2007558619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2007558614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0795d1aa0df615a409594b040396f820, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bauFechado: {fileID: 2007558614}
+  bauAberto: {fileID: 2007558614}
+  opened: 0
 --- !u!1 &2020551264
 GameObject:
   m_ObjectHideFlags: 0
@@ -53482,67 +53491,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c0fba6b5776b054bb8fd6e0bdc4a488, type: 3}
---- !u!1001 &6695661315700190715
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6695661315928334466, guid: 0f5804c6f0ab9f24d8f94255c56944a3, type: 3}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 6695661315928334466, guid: 0f5804c6f0ab9f24d8f94255c56944a3, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -5.76
-      objectReference: {fileID: 0}
-    - target: {fileID: 6695661315928334466, guid: 0f5804c6f0ab9f24d8f94255c56944a3, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.99
-      objectReference: {fileID: 0}
-    - target: {fileID: 6695661315928334466, guid: 0f5804c6f0ab9f24d8f94255c56944a3, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6695661315928334466, guid: 0f5804c6f0ab9f24d8f94255c56944a3, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6695661315928334466, guid: 0f5804c6f0ab9f24d8f94255c56944a3, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6695661315928334466, guid: 0f5804c6f0ab9f24d8f94255c56944a3, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6695661315928334466, guid: 0f5804c6f0ab9f24d8f94255c56944a3, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6695661315928334466, guid: 0f5804c6f0ab9f24d8f94255c56944a3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6695661315928334466, guid: 0f5804c6f0ab9f24d8f94255c56944a3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6695661315928334466, guid: 0f5804c6f0ab9f24d8f94255c56944a3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6695661315928334477, guid: 0f5804c6f0ab9f24d8f94255c56944a3, type: 3}
-      propertyPath: m_Name
-      value: BauObject
-      objectReference: {fileID: 0}
-    - target: {fileID: 6695661315928334477, guid: 0f5804c6f0ab9f24d8f94255c56944a3, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 0f5804c6f0ab9f24d8f94255c56944a3, type: 3}
 --- !u!1001 &9131864700706907162
 PrefabInstance:
   m_ObjectHideFlags: 0

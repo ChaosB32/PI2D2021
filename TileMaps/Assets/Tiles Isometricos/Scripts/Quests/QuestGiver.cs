@@ -7,8 +7,8 @@ public class QuestGiver : MonoBehaviour
 {
     public Quests quest;
 
-    //public PickUpItem pickUpItem;
-    public Crafting crafting;
+    public PickUpItem pickUpItem;
+    //public Crafting crafting;
 
     public GameObject questWindow;
     public Text description;
@@ -23,8 +23,8 @@ public class QuestGiver : MonoBehaviour
     {
         //questWindow.SetActive(false);
         quest.isActive = true;
-        //pickUpItem.quest = quest;
-        crafting.quest = quest;
+        pickUpItem.quest = this;
+        //crafting.quest = quest;
     }
     private void Update()
     {

@@ -20,6 +20,7 @@ public class QuestGoals
         if(goalType == GoalType.Gathering)
         {
             currentAmount++;
+            Debug.Log(currentAmount);
         }
     }
     public void ItemCrafted()

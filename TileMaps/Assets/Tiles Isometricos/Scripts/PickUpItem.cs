@@ -15,7 +15,7 @@ public class PickUpItem : MonoBehaviour
     [SerializeField] AudioClip sfxPegar;
 
     //quests
-    //public Quests quest;
+    public QuestGiver quest;
 
     private void Awake()
     {
@@ -59,15 +59,16 @@ public class PickUpItem : MonoBehaviour
             }
             
             AudioManager.instance.Play(sfxPegar);
-            /*
-            if (quest.isActive)
+            
+            if (quest.quest.isActive)
             {
-                quest.goal.ItemGathered();
-                if (quest.goal.IsReached())
+                Debug.Log("qualquer coisa " + quest.quest.goal.currentAmount ) ;
+                quest.quest.goal.ItemGathered();
+                if (quest.quest.goal.IsReached())
                 {
-                    quest.Complete();
+                    quest.quest.Complete();
                 }
-            }*/
+            }
             Destroy(gameObject);
             
         }
