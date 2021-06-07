@@ -8,7 +8,7 @@ public class Crafting : MonoBehaviour
     [SerializeField] AudioClip sfxCraft;
     [SerializeField] AudioClip sfxErro;
 
-    public Quests quest;
+    public QuestGiver quest;
     public void Craft(CraftingRecipe recipe)
     {
         if(inventory.CheckFreeSpace() == false)
@@ -36,13 +36,13 @@ public class Crafting : MonoBehaviour
         inventory.Add(recipe.output.item, recipe.output.count);
         AudioManager.instance.Play(sfxCraft);
         
-        if (quest.isActive && recipe.output.item == quest.itemtype)
+        if (quest.quest.isActive && recipe.output.item == quest.quest.itemtype)
         {
-            Debug.Log("qualquer coisa " + quest.goal.currentAmount);
-            quest.goal.ItemCrafted();
-            if (quest.goal.IsReached())
+            Debug.Log("qualquer coisa " + quest.quest.goal.currentAmount);
+            quest.quest.goal.ItemCrafted();
+            if (quest.quest.goal.IsReached())
             {
-                quest.Complete();
+                quest.quest.Complete();
             }
         }
     }

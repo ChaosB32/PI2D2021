@@ -17,4 +17,4 @@ MonoBehaviour:
     count: 10
   output:
     item: {fileID: 11400000, guid: ff4396cc474ddfd4cab2fbb90f670444, type: 2}
-    count: 0
+    count: 1

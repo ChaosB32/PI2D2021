@@ -50,6 +50,9 @@ public class CropsManager : TimeAgent
 
     Dictionary<Vector2Int, CropTile> crops;
 
+    //quests
+    public QuestGiver quest;
+
     private void Start()
     {
         crops = new Dictionary<Vector2Int, CropTile>();
@@ -108,6 +111,15 @@ public class CropsManager : TimeAgent
         }
         AudioManager.instance.Play(sfxPlow);
         CreatePlowedTile(position);
+        if (quest.quest.isActive)
+        {
+            Debug.Log("qualquer coisa " + quest.quest.goal.currentAmount);
+            quest.quest.goal.ItemPlowed();
+            if (quest.quest.goal.IsReached())
+            {
+                quest.quest.Complete();
+            }
+        }
     }
 
     public void Seed(Vector3Int position,Crop toSeed)
@@ -115,6 +127,15 @@ public class CropsManager : TimeAgent
         targetTilemap.SetTile(position, seeded);
 
         crops[(Vector2Int)position].crop = toSeed;
+        if (quest.quest.isActive)
+        {
+            Debug.Log("qualquer coisa " + quest.quest.goal.currentAmount);
+            quest.quest.goal.ItemPlanted();
+            if (quest.quest.goal.IsReached())
+            {
+                quest.quest.Complete();
+            }
+        }
     }
 
     private void CreatePlowedTile(Vector3Int position)
@@ -149,6 +170,15 @@ public class CropsManager : TimeAgent
 
             targetTilemap.SetTile(gridPosition, plowed);
             cropTile.Harvested();
+            if (quest.quest.isActive)
+            {
+                Debug.Log("qualquer coisa " + quest.quest.goal.currentAmount);
+                quest.quest.goal.ItemHarvested();
+                if (quest.quest.goal.IsReached())
+                {
+                    quest.quest.Complete();
+                }
+            }
         }
     }
 }

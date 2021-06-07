@@ -12,9 +12,12 @@ public class QuestGiver : MonoBehaviour
     public PickUpItem pickUpItem;
     public Crafting crafting;
     public ShopSlot shopping;
+    public CropsManager cropsManager;
 
     public GameObject questWindow;
     public Text description;
+
+    public Text AmountTxt;
 
     public void OpenQuestWindow()
     {
@@ -27,8 +30,10 @@ public class QuestGiver : MonoBehaviour
         //questWindow.SetActive(false);
         quest.isActive = true;
         pickUpItem.quest = this;
-        crafting.quest = questList[2];
+        crafting.quest = this;
         shopping.quest = this;
+        cropsManager.quest = this;
+
     }
     private void Update()
     {
@@ -49,40 +54,75 @@ public class QuestGiver : MonoBehaviour
             case 1:
                 SetActiveQuest(1);
                 OpenQuestWindow();
+                quest.goal.UpdateTxt();
+                AmountTxt.gameObject.SetActive(true);
                 break;
 
             case 2:
                 SetActiveQuest(2);
                 OpenQuestWindow();
+                quest.goal.UpdateTxt();
+                AmountTxt.gameObject.SetActive(true);
                 break;
 
             case 3:
                 SetActiveQuest(3);
                 OpenQuestWindow();
+                quest.goal.UpdateTxt();
+                AmountTxt.gameObject.SetActive(true);
                 break;
 
             case 4:
                 SetActiveQuest(4);
                 OpenQuestWindow();
+                quest.goal.UpdateTxt();
+                AmountTxt.gameObject.SetActive(true);
                 break;
 
             case 5:
                 SetActiveQuest(5);
                 OpenQuestWindow();
+                quest.goal.UpdateTxt();
+                AmountTxt.gameObject.SetActive(true);
                 break;
 
             case 6:
                 SetActiveQuest(6);
                 OpenQuestWindow();
+                quest.goal.UpdateTxt();
+                AmountTxt.gameObject.SetActive(true);
                 break;
 
             case 7:
                 SetActiveQuest(7);
                 OpenQuestWindow();
+                quest.goal.UpdateTxt();
+                AmountTxt.gameObject.SetActive(true);
+                break;
+
+            case 8:
+                SetActiveQuest(8);
+                OpenQuestWindow();
+                quest.goal.UpdateTxt();
+                AmountTxt.gameObject.SetActive(true);
+                break;
+
+            case 9:
+                SetActiveQuest(9);
+                OpenQuestWindow();
+                quest.goal.UpdateTxt();
+                AmountTxt.gameObject.SetActive(true);
+                break;
+
+            case 10:
+                SetActiveQuest(10);
+                OpenQuestWindow();
+                quest.goal.UpdateTxt();
+                AmountTxt.gameObject.SetActive(true);
                 break;
 
             default:
-                SetActiveQuest(0);
+                SetActiveQuest(11);
                 OpenQuestWindow();
                 break;
         }
