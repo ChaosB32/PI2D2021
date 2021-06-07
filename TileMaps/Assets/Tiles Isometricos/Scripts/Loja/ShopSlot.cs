@@ -15,6 +15,9 @@ public class ShopSlot : MonoBehaviour
     [SerializeField] AudioClip sfxComprar;
     [SerializeField] AudioClip sfxErro;
 
+    //quest
+    public QuestGiver quest;
+
     int myIndex;
 
     public void Start()
@@ -48,6 +51,15 @@ public class ShopSlot : MonoBehaviour
             {
                 AudioManager.instance.Play(sfxComprar);
                 GameManager.instance.inventoryContainer.Add(item);
+                if (quest.quest.isActive && item == quest.quest.itemtype)
+                {
+                    Debug.Log("qualquer coisa " + quest.quest.goal.currentAmount);
+                    quest.quest.goal.ItemBuyed();
+                    if (quest.quest.goal.IsReached())
+                    {
+                        quest.quest.Complete();
+                    }
+                }
             }
         }
         else

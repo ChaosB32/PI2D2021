@@ -30,6 +30,20 @@ public class QuestGoals
             currentAmount++;
         }
     }
+    public void ItemBuyed()
+    {
+        if (goalType == GoalType.Buying)
+        {
+            currentAmount++;
+        }
+    }
+    public void ItemSelled()
+    {
+        if (goalType == GoalType.Selling)
+        {
+            currentAmount++;
+        }
+    }
 
 }
 
@@ -37,5 +51,7 @@ public enum GoalType
 {
     Gathering,
     Crafting,
-    
+    Buying,
+    Selling,
 }
+

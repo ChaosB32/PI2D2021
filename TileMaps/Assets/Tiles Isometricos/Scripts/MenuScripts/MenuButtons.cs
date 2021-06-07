@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class MenuButtons : MonoBehaviour
 {
     public GameObject pausePanel;
+    public ItemContainer itemContainer;
     public void Sair()
     {
         Application.Quit();
@@ -18,6 +19,9 @@ public class MenuButtons : MonoBehaviour
     {
         SceneManager.LoadScene("Menu");
         Time.timeScale = 1;
+        PlayerPrefs.DeleteAll();
+        itemContainer.slots.Clear();
+        
     }
     public void ResumeGame()
     {

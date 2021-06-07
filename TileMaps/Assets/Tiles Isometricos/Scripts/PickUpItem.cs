@@ -60,7 +60,7 @@ public class PickUpItem : MonoBehaviour
             
             AudioManager.instance.Play(sfxPegar);
             
-            if (quest.quest.isActive)
+            if (quest.quest.isActive && item == quest.quest.itemtype)
             {
                 Debug.Log("qualquer coisa " + quest.quest.goal.currentAmount ) ;
                 quest.quest.goal.ItemGathered();

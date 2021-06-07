@@ -25,6 +25,9 @@ public class ItemDragAndDropController : MonoBehaviour
 
     [SerializeField] AudioClip sfxvender;
 
+    //quests
+    public QuestGiver quest;
+
 
     private void Start()
     {
@@ -52,11 +55,21 @@ public class ItemDragAndDropController : MonoBehaviour
                     AddCoins(itemSlot.item.SellPrice);
                     itemSlot.count --;
                     AudioManager.instance.Play(sfxvender);
+                    if (quest.quest.isActive && itemSlot.item == quest.quest.itemtype)
+                    {
+                        Debug.Log("qualquer coisa " + quest.quest.goal.currentAmount);
+                        quest.quest.goal.ItemSelled();
+                        if (quest.quest.goal.IsReached())
+                        {
+                            quest.quest.Complete();
+                        }
+                    }
                     if (itemSlot.count <= 0)
                     {
                         AudioManager.instance.Play(sfxvender);
                         itemSlot.Clear();
                         ItemIcon.SetActive(false);
+                        
                     }
 
                 }

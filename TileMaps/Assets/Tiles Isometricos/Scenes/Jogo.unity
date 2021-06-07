@@ -28588,6 +28588,7 @@ MonoBehaviour:
   coinUI: {fileID: 1924110368}
   loja: {fileID: 749127488}
   sfxvender: {fileID: 8300000, guid: dada6c8dda9a9d643a8755155ac7dfb0, type: 3}
+  quest: {fileID: 1077634166}
 --- !u!114 &594089339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29055,6 +29056,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 63797d7d53b190f40adffa06667dba9b, type: 2}
     - target: {fileID: 171374094, guid: b3eba75b13d3b404ca70313b09ec3ec6, type: 3}
+      propertyPath: quest
+      value: 
+      objectReference: {fileID: 1077634166}
+    - target: {fileID: 171374094, guid: b3eba75b13d3b404ca70313b09ec3ec6, type: 3}
       propertyPath: sfxErro
       value: 
       objectReference: {fileID: 8300000, guid: 793064e8e485a3b47bea4a3f116819a5, type: 3}
@@ -29263,7 +29268,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &639019173
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -29832,6 +29837,15 @@ MonoBehaviour:
   inventory: {fileID: 11400000, guid: ed63a046554314a4b8f43d9b2007e3d1, type: 2}
   sfxCraft: {fileID: 8300000, guid: ed6226f820b75b84ba594186a16494d6, type: 3}
   sfxErro: {fileID: 8300000, guid: 793064e8e485a3b47bea4a3f116819a5, type: 3}
+  quest:
+    isActive: 0
+    isComplete: 0
+    description: 
+    itemtype: {fileID: 0}
+    goal:
+      goalType: 0
+      requiredAmount: 0
+      currentAmount: 0
 --- !u!114 &659201117
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39305,6 +39319,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 5c1ef962944de6a44a9aa40d5912dc21, type: 2}
     - target: {fileID: 171374094, guid: b3eba75b13d3b404ca70313b09ec3ec6, type: 3}
+      propertyPath: quest
+      value: 
+      objectReference: {fileID: 1077634166}
+    - target: {fileID: 171374094, guid: b3eba75b13d3b404ca70313b09ec3ec6, type: 3}
       propertyPath: sfxErro
       value: 
       objectReference: {fileID: 8300000, guid: 793064e8e485a3b47bea4a3f116819a5, type: 3}
@@ -40563,6 +40581,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pausePanel: {fileID: 554972835}
+  itemContainer: {fileID: 0}
 --- !u!114 &1010444040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41137,14 +41156,83 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c570b11bc1b6b2e42819cefd6e39621e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  questList:
+  - isActive: 0
+    isComplete: 0
+    description: Colete 10 madeirinhas
+    itemtype: {fileID: 11400000, guid: dc228a94a78aa844d8aaace24e4e3f2a, type: 2}
+    goal:
+      goalType: 0
+      requiredAmount: 0
+      currentAmount: 0
+  - isActive: 0
+    isComplete: 0
+    description: Construa um machado
+    itemtype: {fileID: 11400000, guid: ff4396cc474ddfd4cab2fbb90f670444, type: 2}
+    goal:
+      goalType: 1
+      requiredAmount: 1
+      currentAmount: 0
+  - isActive: 0
+    isComplete: 0
+    description: Colete 20 madeirinhas
+    itemtype: {fileID: 11400000, guid: dc228a94a78aa844d8aaace24e4e3f2a, type: 2}
+    goal:
+      goalType: 0
+      requiredAmount: 20
+      currentAmount: 0
+  - isActive: 0
+    isComplete: 0
+    description: Construa uma picareta
+    itemtype: {fileID: 11400000, guid: 63797d7d53b190f40adffa06667dba9b, type: 2}
+    goal:
+      goalType: 1
+      requiredAmount: 1
+      currentAmount: 0
+  - isActive: 0
+    isComplete: 0
+    description: Minere 20 pedras
+    itemtype: {fileID: 11400000, guid: 976c6e213d616df43a92a8f00eb68dcf, type: 2}
+    goal:
+      goalType: 0
+      requiredAmount: 10
+      currentAmount: 0
+  - isActive: 0
+    isComplete: 0
+    description: Venda 20 pedras na loja
+    itemtype: {fileID: 11400000, guid: 976c6e213d616df43a92a8f00eb68dcf, type: 2}
+    goal:
+      goalType: 3
+      requiredAmount: 10
+      currentAmount: 0
+  - isActive: 0
+    isComplete: 0
+    description: Compre uma Enxada
+    itemtype: {fileID: 11400000, guid: 5c1ef962944de6a44a9aa40d5912dc21, type: 2}
+    goal:
+      goalType: 2
+      requiredAmount: 1
+      currentAmount: 0
+  - isActive: 0
+    isComplete: 0
+    description: Compre 10 sementes
+    itemtype: {fileID: 11400000, guid: 24c86126cdc55c547b2f1830d5ab7def, type: 2}
+    goal:
+      goalType: 2
+      requiredAmount: 10
+      currentAmount: 0
   quest:
     isActive: 0
+    isComplete: 0
     description: Colete 6 madeirinhas!
+    itemtype: {fileID: 0}
     goal:
       goalType: 0
       requiredAmount: 6
       currentAmount: 0
   pickUpItem: {fileID: 1766820705994930079, guid: 5d4591c41ad803f4a812b0ba435c3bc5, type: 3}
+  crafting: {fileID: 659201116}
+  shopping: {fileID: 171374094}
   questWindow: {fileID: 464434278}
   description: {fileID: 164363119}
 --- !u!4 &1077634167
@@ -44872,6 +44960,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: ff4396cc474ddfd4cab2fbb90f670444, type: 2}
     - target: {fileID: 171374094, guid: b3eba75b13d3b404ca70313b09ec3ec6, type: 3}
+      propertyPath: quest
+      value: 
+      objectReference: {fileID: 1077634166}
+    - target: {fileID: 171374094, guid: b3eba75b13d3b404ca70313b09ec3ec6, type: 3}
       propertyPath: sfxErro
       value: 
       objectReference: {fileID: 8300000, guid: 793064e8e485a3b47bea4a3f116819a5, type: 3}
@@ -47740,6 +47832,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 24c86126cdc55c547b2f1830d5ab7def, type: 2}
     - target: {fileID: 171374094, guid: b3eba75b13d3b404ca70313b09ec3ec6, type: 3}
+      propertyPath: quest
+      value: 
+      objectReference: {fileID: 1077634166}
+    - target: {fileID: 171374094, guid: b3eba75b13d3b404ca70313b09ec3ec6, type: 3}
       propertyPath: sfxErro
       value: 
       objectReference: {fileID: 8300000, guid: 793064e8e485a3b47bea4a3f116819a5, type: 3}
@@ -50224,6 +50320,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pausePanel: {fileID: 0}
+  itemContainer: {fileID: 0}
 --- !u!114 &1947730717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53248,6 +53345,10 @@ PrefabInstance:
       propertyPath: item
       value: 
       objectReference: {fileID: 11400000, guid: e84cc9686ae98ea42b4e0218e4f5f402, type: 2}
+    - target: {fileID: 171374094, guid: b3eba75b13d3b404ca70313b09ec3ec6, type: 3}
+      propertyPath: quest
+      value: 
+      objectReference: {fileID: 1077634166}
     - target: {fileID: 171374094, guid: b3eba75b13d3b404ca70313b09ec3ec6, type: 3}
       propertyPath: sfxErro
       value: 
