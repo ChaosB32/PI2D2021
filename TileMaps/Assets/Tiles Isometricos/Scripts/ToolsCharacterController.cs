@@ -76,7 +76,6 @@ public class ToolsCharacterController : MonoBehaviour
                 item.onItemUsed.OnItemUsed(item, GameManager.instance.inventoryContainer);
             }
         }
-
         return complete;
     }
 

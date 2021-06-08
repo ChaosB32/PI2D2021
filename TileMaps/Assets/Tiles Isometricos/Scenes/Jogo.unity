@@ -28778,7 +28778,7 @@ MonoBehaviour:
     m_PostInfinity: 0
     m_RotationOrder: 4
   dayLightColor: {r: 1, g: 1, b: 1, a: 1}
-  timeScale: 300
+  timeScale: 250
   startAtTime: 800
   sfxDayPass: {fileID: 8300000, guid: 9ec3f676b7b98f340bc13b41d7a64d3e, type: 3}
   text: {fileID: 1240918570}
@@ -53418,7 +53418,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: f3fb125b155abb84cb58359ddbaeb899, type: 2}
     - target: {fileID: 4913054401448106571, guid: 1ddede34e85f6a74983a047b7980b763, type: 3}
       propertyPath: speed
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4913054401448106571, guid: 1ddede34e85f6a74983a047b7980b763, type: 3}
       propertyPath: sfxMove

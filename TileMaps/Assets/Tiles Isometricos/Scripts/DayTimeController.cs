@@ -94,13 +94,22 @@ public class DayTimeController : MonoBehaviour
                 imposto.gameObject.SetActive(true);
             }
 
-            if (days >= 8)
+            if (days >= 8 && days <15)
             {
                 NextDay();
                 imposto.gameObject.SetActive(false);
                 AudioManager.instance.Play(sfxDayPass);
                 RemoveCoins(20);
                 imposto.text = "Hoje você pagou 20 moedas de imposto!";
+                imposto.gameObject.SetActive(true);
+            }
+            if (days >= 15)
+            {
+                NextDay();
+                imposto.gameObject.SetActive(false);
+                AudioManager.instance.Play(sfxDayPass);
+                RemoveCoins(50);
+                imposto.text = "Hoje você pagou 50 moedas de imposto!";
                 imposto.gameObject.SetActive(true);
             }
         }

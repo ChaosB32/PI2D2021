@@ -34,6 +34,7 @@ public class Crafting : MonoBehaviour
         }
 
         inventory.Add(recipe.output.item, recipe.output.count);
+        
         AudioManager.instance.Play(sfxCraft);
         
         if (quest.quest.isActive && recipe.output.item == quest.quest.itemtype)
