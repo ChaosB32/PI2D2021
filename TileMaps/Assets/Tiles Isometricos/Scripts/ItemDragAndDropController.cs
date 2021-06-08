@@ -16,7 +16,7 @@ public class ItemDragAndDropController : MonoBehaviour
     Image itemIconImage;
 
     public int coins;
-    public TMP_Text coinUI;
+    public Text coinUI;
 
     //tentativa pontuacao
     public static ItemDragAndDropController instance;
@@ -147,7 +147,7 @@ public class ItemDragAndDropController : MonoBehaviour
     public void AddCoins(float value)
     {
         coins+= Convert.ToInt32(value);
-        coinUI.text = "x "+coins.ToString();
+        coinUI.text = coins.ToString();
 
         //PlayerPrefs.SetInt("Pontuação", coins);
         //PlayerPrefs.Save();
@@ -156,7 +156,7 @@ public class ItemDragAndDropController : MonoBehaviour
     {
 
         coins -= Convert.ToInt32(value);
-        coinUI.text = "x "+coins.ToString();
+        coinUI.text = coins.ToString();
 
         //PlayerPrefs.SetInt("Pontuação", coins);
         //PlayerPrefs.Save();

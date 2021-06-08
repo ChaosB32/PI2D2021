@@ -8,7 +8,7 @@ using TMPro;
 public class DayTimeController : MonoBehaviour
 {
     const float secondsInDay = 86400f;
-    const float phaseLenght = 28800f; // 8hrs
+    const float phaseLenght = 14400f; // 8hrs
 
     
 
@@ -18,7 +18,7 @@ public class DayTimeController : MonoBehaviour
     
     float time;
     [SerializeField] float timeScale = 60f;
-    [SerializeField] float startAtTime = 28800f; //8horas da manha
+    [SerializeField] float startAtTime = 14400f; //8horas da manha
     [SerializeField] AudioClip sfxDayPass;
 
     [SerializeField] Text text;
@@ -29,6 +29,8 @@ public class DayTimeController : MonoBehaviour
 
     //quests
     public QuestGiver questGiver;
+    //imposto
+    public Text imposto;
 
     private void Awake()
     {
@@ -71,12 +73,44 @@ public class DayTimeController : MonoBehaviour
 
         if (time > secondsInDay)
         {
-            NextDay();
-            AudioManager.instance.Play(sfxDayPass);
-            RemoveCoins();
+
+            if (days <= 3)
+            {
+                NextDay();
+                imposto.gameObject.SetActive(false);
+                AudioManager.instance.Play(sfxDayPass);
+                RemoveCoins(2);
+                imposto.text = "Hoje você pagou 2 moedas de imposto!";
+                imposto.gameObject.SetActive(true);
+            }
+
+            if (days > 3 && days < 8)
+            {
+                NextDay();
+                imposto.gameObject.SetActive(false);
+                AudioManager.instance.Play(sfxDayPass);
+                RemoveCoins(5);
+                imposto.text = "Hoje você pagou 5 moedas de imposto!";
+                imposto.gameObject.SetActive(true);
+            }
+
+            if (days >= 8)
+            {
+                NextDay();
+                imposto.gameObject.SetActive(false);
+                AudioManager.instance.Play(sfxDayPass);
+                RemoveCoins(20);
+                imposto.text = "Hoje você pagou 20 moedas de imposto!";
+                imposto.gameObject.SetActive(true);
+            }
         }
 
         TimeAgents();
+    }
+
+    private void UpdateImpostoTxt()
+    {
+        imposto.text = "Hoje você pagou 1 moeda de imposto!";
     }
 
     private void TimeValueCalculation()
@@ -114,11 +148,11 @@ public class DayTimeController : MonoBehaviour
         time = 0;
         days += 1;
     }
-    public void RemoveCoins()
+    public void RemoveCoins(int value)
     {
 
-        ItemDragAndDropController.instance.coins--;
-        ItemDragAndDropController.instance.coinUI.text = "x " + ItemDragAndDropController.instance.coins.ToString();
+        ItemDragAndDropController.instance.coins-=value;
+        ItemDragAndDropController.instance.coinUI.text =  ItemDragAndDropController.instance.coins.ToString();
 
         //PlayerPrefs.SetInt("Pontuação", coins);
         //PlayerPrefs.Save();
