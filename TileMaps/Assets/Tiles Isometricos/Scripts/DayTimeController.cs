@@ -10,7 +10,7 @@ public class DayTimeController : MonoBehaviour
     const float secondsInDay = 86400f;
     const float phaseLenght = 14400f; // 8hrs
 
-    
+    //28800 até 68400 é dia
 
     [SerializeField] Color nightLightColor;
     [SerializeField] AnimationCurve nightTimeCurve; 
@@ -31,6 +31,9 @@ public class DayTimeController : MonoBehaviour
     public QuestGiver questGiver;
     //imposto
     public Text imposto;
+
+    [SerializeField] AudioClip audioPassaros;
+    [SerializeField] AudioClip audioNoite;
 
     private void Awake()
     {
@@ -70,6 +73,7 @@ public class DayTimeController : MonoBehaviour
 
         TimeValueCalculation();
         DayLight();
+        
 
         if (time > secondsInDay)
         {
@@ -134,6 +138,15 @@ public class DayTimeController : MonoBehaviour
         float v = nightTimeCurve.Evaluate(Horas);
         Color c = Color.Lerp(dayLightColor, nightLightColor, v);
         globalLight.color = c;
+        if(time>= 25200f && time<=25300f)
+        {
+            MusicManager.instance.PlayP(audioPassaros);
+        }
+        if (time >= 71000f && time <= 71100f)
+        {
+            MusicManager.instance.PlayP(audioNoite);
+            
+        }
     }
 
     int oldPhase = 0;
