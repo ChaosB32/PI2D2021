@@ -138,7 +138,7 @@ public class DayTimeController : MonoBehaviour
         float v = nightTimeCurve.Evaluate(Horas);
         Color c = Color.Lerp(dayLightColor, nightLightColor, v);
         globalLight.color = c;
-        if(time>= 25200f && time<=25300f)
+        if(time>= 21600f && time<=21700f)
         {
             MusicManager.instance.PlayP(audioPassaros);
         }
