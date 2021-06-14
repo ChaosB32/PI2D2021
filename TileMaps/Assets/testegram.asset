@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: testegram
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: 6803150025632533582, guid: 71fdaf8a251ac4a4f9f088906166665f, type: 3}
-  - {fileID: 4152910327465251759, guid: 71fdaf8a251ac4a4f9f088906166665f, type: 3}
+  - {fileID: -7428995571567612917, guid: ead5959a99157934b81f11cfaf4de209, type: 3}
+  - {fileID: -5872113987386470013, guid: ead5959a99157934b81f11cfaf4de209, type: 3}
+  - {fileID: -8511142634355994110, guid: ead5959a99157934b81f11cfaf4de209, type: 3}
+  - {fileID: -5872113987386470013, guid: ead5959a99157934b81f11cfaf4de209, type: 3}
   m_MinSpeed: 1
   m_MaxSpeed: 1
   m_AnimationStartTime: 0

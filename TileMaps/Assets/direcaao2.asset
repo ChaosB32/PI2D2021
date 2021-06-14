@@ -13,10 +13,13 @@ MonoBehaviour:
   m_Name: direcaao2
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: 1148596048466274273, guid: 71fdaf8a251ac4a4f9f088906166665f, type: 3}
-  - {fileID: -6416789122189490246, guid: 71fdaf8a251ac4a4f9f088906166665f, type: 3}
-  - {fileID: -6171851250645186540, guid: 71fdaf8a251ac4a4f9f088906166665f, type: 3}
-  - {fileID: -6416789122189490246, guid: 71fdaf8a251ac4a4f9f088906166665f, type: 3}
+  - {fileID: -6487810097637991940, guid: ead5959a99157934b81f11cfaf4de209, type: 3}
+  - {fileID: -8099169303234919258, guid: ead5959a99157934b81f11cfaf4de209, type: 3}
+  - {fileID: -3206464260318160609, guid: ead5959a99157934b81f11cfaf4de209, type: 3}
+  - {fileID: 8331786795957204407, guid: ead5959a99157934b81f11cfaf4de209, type: 3}
+  - {fileID: -3206464260318160609, guid: ead5959a99157934b81f11cfaf4de209, type: 3}
+  - {fileID: -8099169303234919258, guid: ead5959a99157934b81f11cfaf4de209, type: 3}
+  - {fileID: -6487810097637991940, guid: ead5959a99157934b81f11cfaf4de209, type: 3}
   m_MinSpeed: 1
   m_MaxSpeed: 1
   m_AnimationStartTime: 0
